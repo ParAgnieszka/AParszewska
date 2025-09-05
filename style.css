@@ -1,13 +1,58 @@
 @charset "UTF-8";
-/* CSS Document */
+
+/* ZMIENNE */
+:root{
+    /* KOLORY */
+    --white: #fff;
+    --black: #16171D;
+    --gray: #454854;
+    --gray-light: #75798A;
+    --yellow: #FDD546;
+    /* FONTY */
+    --font-inter: 'Inter', sans-serif;
+    /* WAGI */
+    --weight-regular: 400;
+    --weight-xbold: 800;
+    --weight-black: 900;
+    /* ROZMIARY */
+    --size-xs: 16px;
+    --size-s: 18px;
+    --size-m: 24px;
+    --size-l: 52px;
+    --size-xl: 128px;
+    --size-xxl: 147px;
+
+}
+
+body{
+
+}
+
+
 body{
     background-color: #606060;
     color: #fff;
+    margin: 0;
+    padding: 0;
 }
 
-div{
-    background-color: #ff1111;
-    color: #000;
+nav{
     width: 100%;
-    height: 100px;
+    padding: 40px 0;
+    background-color: aqua;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+nav ul li{
+    
+}
+
+nav ul li a{
+    text-decoration: none;
 }
