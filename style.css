@@ -47,6 +47,7 @@ h1{
     color: var(--black);
     font-family: var(--font-inter);
     font-weight: var(--weight-black);
+    margin: 0;
 }
 
 h2{
@@ -55,6 +56,7 @@ h2{
     color: var(--black);
     font-family: var(--font-inter);
     font-weight: var(--weight-black);
+    margin: 0;
 }
 
 h3{
@@ -63,6 +65,7 @@ h3{
     color: var(--black);
     font-family: var(--font-inter);
     font-weight: var(--weight-black);
+    margin: 0;
 }
 
 h4{
@@ -71,6 +74,7 @@ h4{
     color: var(--gray);
     font-family: var(--font-inter);
     font-weight: var(--weight-regular);
+    margin: 0;
 }
 
 p{
@@ -79,6 +83,7 @@ p{
     color: var(--gray);
     font-family: var(--font-inter);
     font-weight: var(--weight-regular);
+    margin: 0;
 }
 
 span{
@@ -87,17 +92,19 @@ span{
     color: var(--gray-light);
     font-family: var(--font-inter);
     font-weight: var(--weight-regular);
+    margin: 0;
 }
 
 .emoji{
-    background-color: red;
     font-size: 96px;
     line-height: 96px;
     width: 96px;
     height: 96px;
+    margin: 0;
 }
 
 /* NAWIGACJA */
+
 nav{
     width: 100%;
     padding: 16px 0;
@@ -152,9 +159,55 @@ nav ul li a{
 
 /* HERO SECTION */
 
+.test{
+    background-color: blueviolet;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: clamp(32px, calc(50vw - 390px), 471px);
+}
+
 .hero{
-    background-color: bisque;
+    background-color: rgb(29, 16, 0);
     width: 100%;
+    max-width: 2190px;
+    display: flex;
+    flex-direction: row;
+    padding: 0 5.85%;
+    box-sizing: border-box;
+}
+
+.hero_text{
+    background-color: rgb(128, 128, 179);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: flex-start;
+    align-items: flex-start;  
+}
+
+.hero_text h1{
+    font-size: 6vw;
+    line-height: 4.5vw;
+}
+
+.projects_cat{
+    background-color: rgb(174, 174, 99);
+    max-height: 602px;
+    height: 519px;
+    flex: 0 0 auto;
+    width: auto;
+    overflow: visible;
+}
+
+.projects_cat img{
+    height: auto;
+    max-height: 602px;
+    width: auto;
+    display: block;
+    z
 }
 
 .hash{
