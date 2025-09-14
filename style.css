@@ -1,6 +1,273 @@
 @charset "UTF-8";
-/* CSS Document */
+
+/* ------------------------ ZMIENNE ------------------------ */
+
+:root{
+    /* KOLORY */
+    --white: #fff;
+    --black: #16171D;
+    --gray: #454854;
+    --gray-light: #75798A;
+    --yellow: #FDD546;
+    /* FONTY */
+    --font-inter: 'Inter', sans-serif;
+    /* WAGI */
+    --weight-regular: 300;
+    --weight-xbold: 700;
+    --weight-black: 900;
+    /* ROZMIARY */
+    --size-xs: 16px;
+    --size-s: 18px;
+    --size-m: 24px;
+    --size-l: 52px;
+    --size-xl: 128px;
+    --size-xxl: 147px;
+    /* WYSOKOŚĆ LINII */
+    --line-height-xs: 24px;
+    --line-height-s: 29px;
+    --line-height-m: 36px;
+    --line-height-l: 68px;
+    --line-height-xl: 156px;
+    --line-height-xxl: 168px;
+}
+
+/* ----------------------- STRONA ------------------------ */
+
 body{
-    background-color: #000;
-    color: #fff;
+    background-color: var(--white);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+html, body {
+    overscroll-behavior: none;
+  }
+
+/* ------------------------ FONTY ------------------------ */
+
+h1{
+    font-size: var(--size-xxl);
+    line-height: var(--line-height-xxl);
+    color: var(--black);
+    font-family: var(--font-inter);
+    font-weight: var(--weight-black);
+    margin: 0;
+}
+
+h2{
+    font-size: var(--size-xl);
+    line-height: var(--line-height-xl);
+    color: var(--black);
+    font-family: var(--font-inter);
+    font-weight: var(--weight-black);
+    margin: 0;
+}
+
+h3{
+    font-size: var(--size-l);
+    line-height: var(--line-height-l);
+    color: var(--black);
+    font-family: var(--font-inter);
+    font-weight: var(--weight-black);
+    margin: 0;
+}
+
+h4{
+    font-size: var(--size-m);
+    line-height: var(--line-height-m);
+    color: var(--gray);
+    font-family: var(--font-inter);
+    font-weight: var(--weight-regular);
+    margin: 0;
+}
+
+p{
+    font-size: var(--size-s);
+    line-height: var(--line-height-s);
+    color: var(--gray);
+    font-family: var(--font-inter);
+    font-weight: var(--weight-regular);
+    margin: 0;
+}
+
+span{
+    font-size: var(--size-xs);
+    line-height: var(--line-height-xs);
+    color: var(--gray-light);
+    font-family: var(--font-inter);
+    font-weight: var(--weight-regular);
+    margin: 0;
+}
+
+/* ------------------------ NAWIGACJA ------------------------ */
+
+nav{
+    width: 100%;
+    padding: 16px 0;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+nav ul li a{
+    color: var(--gray);
+    text-decoration: none;
+    font-family: var(--font-inter);
+    font-size: var(--size-xs);
+    font-weight: var(--weight-regular);
+    line-height: var(--line-height-xs);
+    text-transform: uppercase;
+}
+
+/* ------------------------ DIVIDERY------------------------ */
+
+.divider{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.divider_img{
+    height: 216px;
+    width: 216px;
+    display: flex;
+    justify-content: center;
+}
+
+.divider_img img{
+    height: 100%;
+    width: auto;
+}
+
+.divider_line{
+    background-color: var(--yellow);
+    width: 100%;
+    height: 96px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ------------------------ HERO SECTION ------------------------ */
+
+.top_cat{
+    width: auto;
+    height: 96px;
+    position: absolute;
+    top: 0;
+    left: clamp(32px, calc(50vw - 440px), 471px);
+    filter: drop-shadow(0 1px 1.5px rgba(65, 57, 36, 0.80));
+}
+
+.top_cat img{
+    height: clamp(25%, 7vw, 100%);
+    width: auto;
+}
+
+.hero{
+    width: 100%;
+    max-width: 2190px;
+    display: flex;
+    flex-direction: row;
+    padding-inline: clamp(16px, 5.85vw, 128px);
+    box-sizing: border-box;
+    margin-inline: auto;
+}
+
+.emoji{
+    font-size: clamp(56px, 7.5cqw, 96px);
+    line-height: clamp(56px, 7.5cqw, 96px);
+    max-width: 96px;
+    max-height: 96px;
+    margin: 0;
+    margin-top: 32px;
+}
+
+/* ---- hero text ---- */
+
+.hero_text{
+    container-type: inline-size;
+    flex: 1;
+    max-width: 66vw;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(24px, 2cqw, 40px);
+    justify-content: flex-start;
+    align-items: flex-start;  
+}
+
+.hero_text h1{
+    color: var(--black);
+    font-size: clamp(32px, 11.1cqw, 155px);
+    white-space: nowrap;
+    margin: 0;
+    line-height: clamp(32px, 11.1cqw, 116px);
+}
+
+.hero_text h1 span{
+    color: var(--yellow);
+    font-size: clamp(32px, 11.1cqw, 155px);
+    white-space: nowrap;
+    margin: 0;
+    line-height: clamp(32px, 11.1cqw, 116px);
+    font-weight: var(--weight-black);
+}
+
+.hero_desc{
+    display: flex;
+    flex-direction: column;
+    gap: clamp(24px, 3.5cqw, 32px);
+}
+
+.hash{
+    display: inline-flex;
+    width: 100%;
+    align-items: center;
+    align-content: center;
+    gap: 8px 16px;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+}
+
+/* ---- hero projects cat ---- */
+
+.projects_cat{
+    max-height: 602px;
+    height: 542px;
+    flex: 0 0 auto;
+    width: auto;
+    overflow: visible;
+    z-index: 5;
+}
+
+.projects_cat img{
+    height: auto;
+    max-height: 602px;
+    width: auto;
+    display: block;
+}
+
+/* ------------------------ PROJECTS ------------------------ */
+
+#projects_divider .divider_img{
+    display: none;
+}
+
+/* ------------------------ ANIMATIONS ------------------------ */
+
+/* ------------------------ ART & PHOTOGRAPHY ------------------------ */
+
+/* ------------------------ FOOTER ------------------------ */
+
+footer{
+    width: 100%;
+    height: 642px;
+    background-color: var(--yellow);
 }
